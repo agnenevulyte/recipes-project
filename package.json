@@ -18,7 +18,8 @@
   },
   "homepage": "https://github.com/agnenevulyte/recipes-project#readme",
   "devDependencies": {
-    "webpack": "^4.39.3"
+    "webpack": "^4.39.3",
+    "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
     "webpack-cli": "^3.3.7"
