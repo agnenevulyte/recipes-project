@@ -22,12 +22,12 @@
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-loader": "^8.0.6",
-    "html-webpack-plugin": "^3.2.0",
+    "core-js": "^3.2.1",
+    "html-webpack-plugin": "3.0.7",
+    "regenerator-runtime": "^0.13.3",
     "webpack": "^4.39.3",
     "webpack-cli": "^3.3.7",
     "webpack-dev-server": "^3.8.0"
   },
-  "dependencies": {
-    "@babel/polyfill": "^7.4.4"
-  }
+  "dependencies": {}
 }

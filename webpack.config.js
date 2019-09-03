@@ -1,10 +1,11 @@
-require("@babel/polyfill");
+require("core-js/stable");
+require("regenerator-runtime/runtime");
 const path = require('path');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 
 module.exports = {
-    entry: ['@babel/polyfill', './src/js/index.js'],
+    entry: './src/js/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
         filename: 'js/bundle.js'
