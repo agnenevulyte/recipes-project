@@ -1,0 +1,26 @@
+{
+  "name": "recipes-project",
+  "version": "1.0.0",
+  "description": "ajax, es6",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agnenevulyte/recipes-project.git"
+  },
+  "author": "Agne Nevulyte",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agnenevulyte/recipes-project/issues"
+  },
+  "homepage": "https://github.com/agnenevulyte/recipes-project#readme",
+  "devDependencies": {
+    "webpack": "^4.39.3"
+  },
+  "dependencies": {
+    "webpack-cli": "^3.3.7"
+  }
+}
