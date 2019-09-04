@@ -1,4 +1,3 @@
-import "regenerator-runtime/runtime";
 import axios from 'axios';
 
 // https://www.food2fork.com/api/search
@@ -12,7 +11,7 @@ export default class Search {
 
     async getResults() {
         const proxy = 'https://cors-anywhere.herokuapp.com/';
-        const key = "a384a574fd1cbbf4625b5b810319264b";
+        const key = "da13a79241ea5c34ea42f9e0352a1d22";
         try {
             const res = await axios(`${proxy}https://www.food2fork.com/api/search?key=${key}&q=${this.query}`);
             // console.log(res);
