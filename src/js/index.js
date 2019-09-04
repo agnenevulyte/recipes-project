@@ -1,5 +1,19 @@
-import string from './models/Search';
-import { add as a, multiply, ID } from './views/searchView';
-import * as searchView from './views/searchView';
-console.log(`Using imported functions: add as a - ${a(ID, 2)} and multiply - ${multiply(3,5)}. As well as, ${string}`);
-console.log(`Using imported functions, importing everything: add - ${searchView.add(ID, 2)} and multiply - ${searchView.multiply(3,5)}.`);
+import "regenerator-runtime/runtime";
+import axios from 'axios';
+
+// https://www.food2fork.com/api/search
+// a384a574fd1cbbf4625b5b810319264b
+
+async function getResults(query) {
+    const proxy = 'https://cors-anywhere.herokuapp.com/';
+    const key = "a384a574fd1cbbf4625b5b810319264b";
+    try {
+        const res = await axios(`${proxy}https://www.food2fork.com/api/search?key=${key}&q=${query}`);
+        const recipes = res.data.recipes;
+        console.log(recipes);
+    } catch(error) {
+        alert(error);
+    }
+}
+
+getResults("tomato pasta");
