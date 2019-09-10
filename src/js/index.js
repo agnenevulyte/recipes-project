@@ -1,5 +1,6 @@
 import "regenerator-runtime/runtime";
 import Search from './models/Search';
+import Recipe from './models/Recipe';
 import * as searchView from './views/searchView';
 import { elements, renderLoader, clearLoader } from './views/base';
 
@@ -12,6 +13,9 @@ Global state of the pp
 */
 const state = {};
 
+/**
+ * SEARCH CONTROLLER
+ */
 const controlSearch = async () => {
     // get the query from view
     const query = searchView.getInput();
@@ -48,3 +52,10 @@ elements.searchResPages.addEventListener('click', e => {
         // console.log(goToPage);
     }
 })
+
+/**
+ * RECIPE CONTROLLER
+ */
+const r = new Recipe(47746);
+r.getRecipe();
+console.log(r)
