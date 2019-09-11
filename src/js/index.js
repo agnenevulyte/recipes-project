@@ -19,6 +19,8 @@ const state = {};
 const controlSearch = async () => {
     // get the query from view
     const query = searchView.getInput();
+    // test
+    // const query = 'pizza';
     // console.log(query);
 
     if (query) {
@@ -30,15 +32,15 @@ const controlSearch = async () => {
         searchView.clearResults();
         renderLoader(elements.searchRes);
 
-        try{
+        try {
         // search for recipes
-        await state.search.getResults();
+            await state.search.getResults();
 
-        // render rsults on UI
-        clearLoader();
-        searchView.renderResults(state.search.result);
+            // render rsults on UI
+            clearLoader();
+            searchView.renderResults(state.search.result);
         } catch(error) {
-            alert('Something wrong with the search...');
+            alert('Something is wrong with the search...');
             clearLoader();
         }
     }
@@ -48,6 +50,12 @@ elements.searchForm.addEventListener('submit', e => {
     e.preventDefault();
     controlSearch();
 });
+
+// test
+// window.addEventListener('load', e => {
+//     e.preventDefault();
+//     controlSearch();
+// });
 
 elements.searchResPages.addEventListener('click', e => {
     const btn = e.target.closest('.btn-inline');
@@ -72,6 +80,9 @@ const controlRecipe = async () => {
 
         // Create a new recipe object
         state.recipe = new Recipe(id);
+
+        // testing
+        window.r = state.recipe;
 
         try {
 
