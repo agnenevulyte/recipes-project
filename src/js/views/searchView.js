@@ -12,14 +12,14 @@ export const clearResults = () => {
 export const highlightSelected = id => {
     const resultsArray = Array.from(document.querySelectorAll('.results__link'));
     resultsArray.forEach(el => el.classList.remove('results__link--active'));
-    document.querySelector(`a[href="#${id}"]`).classList.add('result__link--active');
+    document.querySelector(`.results__link[href="#${id}"]`).classList.add('result__link--active');
 };
 
 /*
 'Pasta with tomato and spinach'
 acc = 0 / acc + cur.length = 0 + 5 / newTitle = ['Pasta']
 */
-const limitRecipeTitle = (title, limit = 17) => {
+export const limitRecipeTitle = (title, limit = 17) => {
     const newTitle = [];
     if (title.length > limit) {
         title.split(' ').reduce((acc, cur) => {
